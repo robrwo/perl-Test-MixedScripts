@@ -129,7 +129,7 @@ sub _make_negative_regex {
     return qr/([^${set}])/up;
 }
 
-=export
+=export all_perl_files_scripts_ok
 
   all_perl_files_scripts_ok();
 
