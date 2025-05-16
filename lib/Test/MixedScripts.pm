@@ -19,7 +19,7 @@ use Test2::API qw( context );
 
 our @EXPORT_OK = qw( all_perl_files_scripts_ok file_scripts_ok );
 
-our $VERSION = 'v0.1.0';
+our $VERSION = 'v0.1.1';
 
 =encoding utf8
 
