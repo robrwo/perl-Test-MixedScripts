@@ -29,6 +29,10 @@ You can override the defaults by adding a list of Unicode scripts, for example
 
   file_scripts_ok( $filepath, qw/ Common Latin Cyryllic / );
 
+You can also pass options as a hash reference,
+
+  file_scripts_ok( $filepath, { scripts => [qw/ Common Latin Cyryllic /] } );
+
 A safer alternative to overriding the default scripts for a file is to specify an exception on each line using a special
 comment:
 
@@ -37,12 +41,15 @@ comment:
 =cut
 
 sub file_scripts_ok {
-    my ( $file, @scripts ) = @_;
-    push @scripts, qw( Latin Common ) unless @scripts;
+    my ( $file, @args ) = @_;
+
+    my $options = @args == 1 && ref( $args[0] ) eq "HASH" ? $args[0] : { scripts => \@args };
+    $options->{scripts} //= [];
+    push @{ $options->{scripts} }, qw( Latin Common ) unless defined $options->{scripts}[0];
 
     my $ctx = context();
 
-    if ( my $error = _check_file_scripts( $file, @scripts ) ) {
+    if ( my $error = _check_file_scripts( $file, $options ) ) {
 
         my ( $lino, $pre, $char ) = @{$error};
 
@@ -63,8 +70,9 @@ sub file_scripts_ok {
 }
 
 sub _check_file_scripts {
-    my ( $file, @scripts ) = @_;
+    my ( $file, $options ) = @_;
 
+    my @scripts = @{ $options->{scripts} };
     my $default = _make_regex(@scripts);
 
     my $fh = IO::File->new( $file, "r" ) or croak "Cannot open ${file}: $!";
