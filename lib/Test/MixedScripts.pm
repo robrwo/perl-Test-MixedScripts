@@ -10,7 +10,7 @@ use warnings;
 use Carp         qw( croak );
 use Exporter 5.57 qw( import );
 use IO           qw( File );
-use Unicode::UCD qw( charprop );
+use Unicode::UCD qw( charscript );
 
 use Test2::API qw( context );
 
@@ -46,7 +46,10 @@ sub file_scripts_ok {
 
         my ( $lino, $pre, $char ) = @{$error};
 
-        my $script  = charprop( ord($char), "Script_Extensions" );
+        # Ideally we would use charprop instead of charscript, since that supports Script_Extensions, but Unicode::UCD
+        # is not dual life and charprop is only available after v5.22.0.
+
+        my $script  = charscript( ord($char) );
         my $message = sprintf( 'Unexpected %s character on line %u character %s', $script, $lino, length($pre) + 1 );
 
         $ctx->fail( $file, $message );
