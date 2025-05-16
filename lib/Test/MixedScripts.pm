@@ -21,6 +21,19 @@ our @EXPORT_OK = qw( all_perl_files_scripts_ok file_scripts_ok );
 
 =encoding utf8
 
+=head1 SYNOPSIS
+
+  use Test::MixedScripts qw( all_perl_files_scripts_ok file_scripts_ok );
+
+  all_perl_files_scripts_ok();
+
+  file_scripts_ok( 'assets/site.js' );
+
+=head1 DESCRIPTION
+
+This is a module to test that Perl code and other text files do not have potentially malicious or confusing Unicode
+combinations.
+
 =export file_scripts_ok
 
   file_scripts_ok( $filepath, @scripts );
@@ -198,6 +211,10 @@ sub _is_perl_script {
 =head1 SEE ALSO
 
 L<Test::PureASCII> tests that only ASCII characters are used.
+
+L<Unicode Confusables|https://util.unicode.org/UnicodeJsps/confusables.jsp>
+
+L<Detecting malicious Unicode|https://daniel.haxx.se/blog/2025/05/16/detecting-malicious-unicode/>
 
 =head1 append:AUTHOR
 
