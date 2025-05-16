@@ -1,2 +1,3 @@
 Test-MixedScripts-*/
 Test-MixedScripts-*.tar.gz
+.build/
