@@ -28,4 +28,25 @@ is $b1->squash_info->flatten,
   ],
   "expected failure";
 
+
+file_scripts_ok( 't/data/bad-02.js', qw( Latin Armenian Common ) );
+
+my $b2 = intercept {
+    file_scripts_ok('t/data/bad-02.js');
+};
+
+is $b2->squash_info->flatten,
+  [
+    {
+        about          => "fail",
+        causes_failure => 1,
+        diag           => [ "Unexpected Armenian character on line 4 character 41", ],
+        name           => 't/data/bad-02.js',
+        pass           => 0,
+        trace_file     => __FILE__,
+        trace_line     => 35,
+    }
+  ],
+  "expected failure";
+
 done_testing;
