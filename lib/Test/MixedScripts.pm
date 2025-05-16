@@ -156,8 +156,9 @@ sub _all_perl_files {
 }
 
 sub _all_files {
+    my $options = { };
+    $options = shift if ref $_[0] eq 'HASH';
     my @base_dirs = @_ ? @_ : cwd();
-    my $options   = pop(@base_dirs) if ref $base_dirs[-1] eq 'HASH';
     my @found;
     my $want_sub = sub {
         my @chunks = ( '', File::Spec->splitdir($File::Find::name) );
