@@ -1,5 +1,9 @@
 package Test::MixedScripts;
 
+use utf8;
+
+# ABSTRACT: test text for mixed and potentially confusable Unicode scripts
+
 use v5.14;
 use warnings;
 
@@ -11,6 +15,26 @@ use Unicode::UCD qw( charprop );
 use Test2::API qw( context );
 
 our @EXPORT_OK = qw( file_scripts_ok );
+
+=encoding utf8
+
+=export file_scripts_ok
+
+  file_scripts_ok( $filepath, @scripts );
+
+This tests that the text file at C<$filepath> contains only characters in the specified C<@scripts>.
+If no scripts are given, it defaults to C<Common> and C<Latin> characters.
+
+You can override the defaults by adding a list of Unicode scripts, for example
+
+  file_scripts_ok( $filepath, qw/ Common Latin Cyryllic / );
+
+A safer alternative to overriding the default scripts for a file is to specify an exception on each line using a special
+comment:
+
+   "English bŭlgarski" ## Test::MixedScripts Latin,Cyrillic,Common
+
+=cut
 
 sub file_scripts_ok {
     my ( $file, @scripts ) = @_;
@@ -77,3 +101,9 @@ sub _make_negative_regex {
 }
 
 1;
+
+=head1 SEE ALSO
+
+L<Test::PureASCII> tests that only ASCII characters are used.
+
+=cut
