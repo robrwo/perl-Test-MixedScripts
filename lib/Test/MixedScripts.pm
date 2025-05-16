@@ -7,10 +7,10 @@ use utf8;
 use v5.14;
 use warnings;
 
-use Carp         qw( croak );
+use Carp          qw( croak );
 use Exporter 5.57 qw( import );
-use IO           qw( File );
-use Unicode::UCD qw( charscript );
+use IO            qw( File );
+use Unicode::UCD  qw( charscript );
 
 use Test2::API qw( context );
 
