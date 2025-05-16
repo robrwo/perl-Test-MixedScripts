@@ -8,7 +8,7 @@ use v5.14;
 use warnings;
 
 use Carp         qw( croak );
-use Exporter     qw( import );
+use Exporter 5.57 qw( import );
 use IO           qw( File );
 use Unicode::UCD qw( charprop );
 
