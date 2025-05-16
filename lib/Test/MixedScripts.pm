@@ -168,6 +168,8 @@ sub _all_files {
             $chunks[-1] eq 'CVS'                                            # cvs
             or $chunks[-1] eq '.svn'                                        # subversion
             or $chunks[-1] eq '.git'                                        # git
+            or $chunks[-1] eq '.build'                                      # Dist::Zilla
+            or $chunks[-1] eq '.mite'                                       # Mite
             or ( $chunks[-2] eq 'blib' and $chunks[-1] eq 'libdoc' )        # pod doc
             or ( $chunks[-2] eq 'blib' and $chunks[-1] =~ /^man[0-9]$/ )    # pod doc
             or $chunks[-1] eq 'local'                                       # Carton
