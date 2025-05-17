@@ -4,7 +4,7 @@ use utf8;
 
 # ABSTRACT: test text for mixed and potentially confusable Unicode scripts
 
-use v5.14;
+use v5.16;
 use warnings;
 
 use Carp          qw( croak );

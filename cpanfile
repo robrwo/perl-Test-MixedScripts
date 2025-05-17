@@ -9,7 +9,7 @@ requires "File::Spec" => "0";
 requires "IO" => "0";
 requires "Test2::API" => "1.302200";
 requires "Unicode::UCD" => "0";
-requires "perl" => "v5.14.0";
+requires "perl" => "v5.16.0";
 requires "utf8" => "0";
 requires "warnings" => "0";
 
