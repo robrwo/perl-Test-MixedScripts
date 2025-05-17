@@ -4,5 +4,8 @@ Revision history for {{ $dist->name }}:
   [Bug Fixes]
   - Specified a minimum version of Test2::API.
 
+  [Tests]
+  - Added more author tests.
+
 v0.1.0    2025-05-16 22:32:37+01:00 Europe/London
   - Initial version.
