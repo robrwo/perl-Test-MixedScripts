@@ -1,6 +1,8 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+
+v0.2.0    2025-05-17 23:25:18+01:00 Europe/London
   [Enhancements]
   - all_perl_file_scripts_ok will check XS-related files
     (.xs, .c and .h suffixes).
