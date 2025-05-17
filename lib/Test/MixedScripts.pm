@@ -15,7 +15,7 @@ use File::Spec;
 use IO            qw( File );
 use Unicode::UCD  qw( charscript );
 
-use Test2::API qw( context );
+use Test2::API 1.302200 qw( context );
 
 our @EXPORT_OK = qw( all_perl_files_scripts_ok file_scripts_ok );
 
