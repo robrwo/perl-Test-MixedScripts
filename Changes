@@ -4,6 +4,9 @@ Revision history for {{ $dist->name }}:
   [Bug Fixes]
   - Specified a minimum version of Test2::API.
 
+  [Security]
+  - Updated minimum build requirements.
+
   [Tests]
   - Added more author tests.
 

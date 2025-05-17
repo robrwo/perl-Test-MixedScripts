@@ -13,10 +13,15 @@ requires "perl" => "v5.14.0";
 requires "utf8" => "0";
 requires "warnings" => "0";
 
+on 'build' => sub {
+  requires "ExtUtils::MakeMaker" => "7.22";
+  requires "Module::Metadata" => "1.000015";
+};
+
 on 'test' => sub {
   requires "File::Spec" => "0";
   requires "FindBin" => "0";
-  requires "Module::Metadata" => "0";
+  requires "Module::Metadata" => "1.000015";
   requires "Test2::V0" => "0";
   requires "Test::More" => "0";
   requires "strict" => "0";
