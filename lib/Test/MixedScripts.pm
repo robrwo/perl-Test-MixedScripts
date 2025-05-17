@@ -152,7 +152,7 @@ sub all_perl_files_scripts_ok {
 
 sub _all_perl_files {
     my @files = _all_files(@_);
-    return grep { _is_perl_module($_) || _is_perl_script($_) || _is_pod_file($_) } @files;
+    return grep { _is_perl_module($_) || _is_perl_script($_) || _is_pod_file($_) || _is_xs_file($_) } @files;
 }
 
 sub _all_files {
@@ -209,6 +209,10 @@ sub _is_perl_script {
     my $first = $fh->getline;
     return 1 if defined $first && ( $first =~ /^#!.*perl\b/ );
     return;
+}
+
+sub _is_xs_file {
+    $_[0] =~ /\.(c|h|xs)$/i;
 }
 
 1;
