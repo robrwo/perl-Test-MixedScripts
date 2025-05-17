@@ -1,6 +1,8 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+
+v0.1.1    2025-05-17 14:15:48+01:00 Europe/London
   [Bug Fixes]
   - Specified a minimum version of Test2::API.
 
