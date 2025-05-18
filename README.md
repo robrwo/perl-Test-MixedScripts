@@ -4,7 +4,7 @@ Test::MixedScripts - test text for mixed and potentially confusable Unicode scri
 
 # VERSION
 
-version v0.2.1
+version v0.2.2
 
 # SYNOPSIS
 

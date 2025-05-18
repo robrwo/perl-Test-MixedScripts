@@ -1,6 +1,8 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+
+v0.2.1    2025-05-18 17:30:00+01:00 Europe/London
   [Enhancements]
   - The test failure diagnostics indicate what file failed.
 
