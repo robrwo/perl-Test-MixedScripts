@@ -35,13 +35,13 @@ If no scripts are given, it defaults to `Common` and `Latin` characters.
 You can override the defaults by adding a list of Unicode scripts, for example
 
 ```
-file_scripts_ok( $filepath, qw/ Common Latin Cyryllic / );
+file_scripts_ok( $filepath, qw/ Common Latin Cyrillic / );
 ```
 
 You can also pass options as a hash reference,
 
 ```perl
-file_scripts_ok( $filepath, { scripts => [qw/ Common Latin Cyryllic /] } );
+file_scripts_ok( $filepath, { scripts => [qw/ Common Latin Cyrillic /] } );
 ```
 
 A safer alternative to overriding the default scripts for a file is to specify an exception on each line using a special
