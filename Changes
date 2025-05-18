@@ -1,6 +1,9 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+  [Enhancements]
+  - The test failure diagnostics indicate what file failed.
+
   [Documentation]
   - Fixed typos.
 

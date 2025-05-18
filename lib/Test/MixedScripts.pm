@@ -82,7 +82,8 @@ sub file_scripts_ok {
         # is not dual life and charprop is only available after v5.22.0.
 
         my $script  = charscript( ord($char) );
-        my $message = sprintf( 'Unexpected %s character on line %u character %s', $script, $lino, length($pre) + 1 );
+        my $message =
+          sprintf( 'Unexpected %s character on line %u character %s in %s', $script, $lino, length($pre) + 1, "$file" );
 
         $ctx->fail( $file, $message );
 
