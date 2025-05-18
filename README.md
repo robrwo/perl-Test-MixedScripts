@@ -72,6 +72,9 @@ This applies ["file\_scripts\_ok"](#file_scripts_ok) to all of the Perl scripts 
 
 The current version does not support specifying exceptions to specific lines of POD.
 
+The only workaround for this is to escape the individual characters using the `E` formatting code. See [perlpod](https://metacpan.org/pod/perlpod)
+for more information. See [perlpod](https://metacpan.org/pod/perlpod) for more details.
+
 # SEE ALSO
 
 [Test::PureASCII](https://metacpan.org/pod/Test%3A%3APureASCII) tests that only ASCII characters are used.

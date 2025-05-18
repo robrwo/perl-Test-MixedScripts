@@ -229,6 +229,9 @@ sub _is_xs_file {
 
 The current version does not support specifying exceptions to specific lines of POD.
 
+The only workaround for this is to escape the individual characters using the C<E> formatting code. See L<perlpod>
+for more information. See L<perlpod> for more details.
+
 =head1 SEE ALSO
 
 L<Test::PureASCII> tests that only ASCII characters are used.
