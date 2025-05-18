@@ -224,6 +224,10 @@ sub _is_xs_file {
 
 1;
 
+=head1 KNOWN ISSUES
+
+The current version does not support specifying exceptions to specific lines of POD.
+
 =head1 SEE ALSO
 
 L<Test::PureASCII> tests that only ASCII characters are used.

@@ -68,6 +68,10 @@ all_perl_files_scripts_ok( \%options, @dirs );
 
 This applies ["file\_scripts\_ok"](#file_scripts_ok) to all of the Perl scripts in `@dirs`, or the current directory if they are omitted.
 
+# KNOWN ISSUES
+
+The current version does not support specifying exceptions to specific lines of POD.
+
 # SEE ALSO
 
 [Test::PureASCII](https://metacpan.org/pod/Test%3A%3APureASCII) tests that only ASCII characters are used.
