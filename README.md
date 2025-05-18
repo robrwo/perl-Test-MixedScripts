@@ -21,6 +21,13 @@ file_scripts_ok( 'assets/site.js' );
 This is a module to test that Perl code and other text files do not have potentially malicious or confusing Unicode
 combinations.
 
+For example, the text for the domain names "оnе.example.com" and "one.example.com" look indistinguishable in many fonts,
+but the first one has Cyrillic letters.  If your software interactied with a service on the second domain, then someone
+can operate a service on the first domain and attempt to fool developers into using their domain instead.
+
+This might be through a malicious patch submission, or even text from an email or web page that they have convinced a
+developer to copy and paste into their code.
+
 # EXPORTS
 
 ## file\_scripts\_ok
