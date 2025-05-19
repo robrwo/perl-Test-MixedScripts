@@ -1,6 +1,9 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+  [Bug Fixes]
+  - Ignores "tmp" directory inside the repo.
+
   [Documentation]
   - Documented a known issue with Pod::Weaver.
 
