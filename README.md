@@ -105,6 +105,13 @@ all_perl_files_scripts_ok( \%options, @dirs );
 
 This applies ["file\_scripts\_ok"](#file_scripts_ok) to all of the Perl scripts in `@dirs`, or the current directory if they are omitted.
 
+# KNOWN ISSUES
+
+Some scripts were added to later versions of Unicode, and supported by later versions of Perl.  This means that you
+cannot run tests for some scripts on older versions of Perl.
+See [Unicode Supported Scripts](https://www.unicode.org/standard/supported.html) for a list of scripts supported
+by Unicode versions.
+
 # SEE ALSO
 
 [Test::PureASCII](https://metacpan.org/pod/Test%3A%3APureASCII) tests that only ASCII characters are used.

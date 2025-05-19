@@ -264,6 +264,13 @@ sub _is_xs_file {
 
 1;
 
+=head1 KNOWN ISSUES
+
+Some scripts were added to later versions of Unicode, and supported by later versions of Perl.  This means that you
+cannot run tests for some scripts on older versions of Perl.
+See L<Unicode Supported Scripts|https://www.unicode.org/standard/supported.html> for a list of scripts supported
+by Unicode versions.
+
 =head1 SEE ALSO
 
 L<Test::PureASCII> tests that only ASCII characters are used.
