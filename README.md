@@ -107,10 +107,16 @@ This applies ["file\_scripts\_ok"](#file_scripts_ok) to all of the Perl scripts 
 
 # KNOWN ISSUES
 
+## Unicode and Perl Versions
+
 Some scripts were added to later versions of Unicode, and supported by later versions of Perl.  This means that you
 cannot run tests for some scripts on older versions of Perl.
 See [Unicode Supported Scripts](https://www.unicode.org/standard/supported.html) for a list of scripts supported
 by Unicode versions.
+
+## Pod::Weaver
+
+The `=for` directive is not consistently copied relative to the sections that occur in by [Pod::Weaver](https://metacpan.org/pod/Pod%3A%3AWeaver).
 
 # SEE ALSO
 

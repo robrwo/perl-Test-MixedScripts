@@ -266,10 +266,16 @@ sub _is_xs_file {
 
 =head1 KNOWN ISSUES
 
+=head2 Unicode and Perl Versions
+
 Some scripts were added to later versions of Unicode, and supported by later versions of Perl.  This means that you
 cannot run tests for some scripts on older versions of Perl.
 See L<Unicode Supported Scripts|https://www.unicode.org/standard/supported.html> for a list of scripts supported
 by Unicode versions.
+
+=head2 Pod::Weaver
+
+The C<=for> directive is not consistently copied relative to the sections that occur in by L<Pod::Weaver>.
 
 =head1 SEE ALSO
 
