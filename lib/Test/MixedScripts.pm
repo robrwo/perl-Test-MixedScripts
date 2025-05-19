@@ -13,7 +13,8 @@ use Exporter 5.57 qw( import );
 use File::Find;
 use File::Spec;
 use IO            qw( File );
-use Unicode::UCD  qw( charscript );
+use List::Util    qw( first );
+use Unicode::UCD  qw( charscript charscripts );
 
 use Test2::API 1.302200 qw( context );
 
@@ -158,6 +159,10 @@ sub _check_file_scripts {
 }
 
 sub _make_regex_set {
+    state $scripts = charscripts();
+    if ( my $err = first { !exists $scripts->{$_} } @_ ) {
+        croak "Unknown script ${err}";
+    }
     return join( "", map { sprintf( '\p{scx=%s}', $_ ) } @_ );
 }
 

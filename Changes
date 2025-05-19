@@ -4,6 +4,8 @@ Revision history for {{ $dist->name }}:
   [Enhancements]
   - Added POD directives to change the expected Unicode scripts for longer blocks of code.
 
+  - The tests will die if an unknown script is passed to the configuration.
+
   [Documentation]
   - Document failure messages.
 
