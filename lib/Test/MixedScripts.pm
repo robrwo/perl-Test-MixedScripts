@@ -19,13 +19,13 @@ use Test2::API 1.302200 qw( context );
 
 our @EXPORT_OK = qw( all_perl_files_scripts_ok file_scripts_ok );
 
-our $VERSION = 'v0.2.3';
+our $VERSION = 'v0.3.0';
 
 =encoding utf8
 
 =head1 SYNOPSIS
 
-  use Test::MixedScripts qw( all_perl_files_scripts_ok file_scripts_ok );
+  use Test::MixedScripts v0.3.0 qw( all_perl_files_scripts_ok file_scripts_ok );
 
   all_perl_files_scripts_ok();
 

@@ -4,12 +4,12 @@ Test::MixedScripts - test text for mixed and potentially confusable Unicode scri
 
 # VERSION
 
-version v0.2.3
+version v0.3.0
 
 # SYNOPSIS
 
 ```perl
-use Test::MixedScripts qw( all_perl_files_scripts_ok file_scripts_ok );
+use Test::MixedScripts v0.3.0 qw( all_perl_files_scripts_ok file_scripts_ok );
 
 all_perl_files_scripts_ok();
 
