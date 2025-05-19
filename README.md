@@ -58,6 +58,36 @@ comment:
 "English bŭlgarski" ## Test::MixedScripts Latin,Cyrillic,Common
 ```
 
+You can also override the default scripts with a special POD directive, which will change the scripts for all lines
+(code or POD) that follow:
+
+```
+=for Test::MixedScripts Latin,Cyrillic,Common
+```
+
+You can reset to the default scripts using:
+
+```
+=for Test::MixedScripts default
+```
+
+You can escape the individual characters in strings and regular expressions using hex codes, for example,
+
+```
+say qq{The Cyryllic "\x{043e}" looks like an "o".};
+```
+
+and in POD using the `E` formatting code. For example,
+    =pod
+
+```
+The Cyryllic "E<0x043e>" looks like an "o".
+
+=cut
+```
+
+See [perlpod](https://metacpan.org/pod/perlpod) for more information.
+
 ## all\_perl\_files\_scripts\_ok
 
 ```
@@ -67,13 +97,6 @@ all_perl_files_scripts_ok( \%options, @dirs );
 ```
 
 This applies ["file\_scripts\_ok"](#file_scripts_ok) to all of the Perl scripts in `@dirs`, or the current directory if they are omitted.
-
-# KNOWN ISSUES
-
-The current version does not support specifying exceptions to specific lines of POD.
-
-The only workaround for this is to escape the individual characters using the `E` formatting code. See [perlpod](https://metacpan.org/pod/perlpod)
-for more information. See [perlpod](https://metacpan.org/pod/perlpod) for more details.
 
 # SEE ALSO
 

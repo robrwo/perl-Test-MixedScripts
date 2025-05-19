@@ -1,8 +1,11 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+  [Enhancements]
+  - Added POD directives to change the expected Unicode scripts for longer blocks of code.
+
   [Documentation]
-  - Fixed typo.
+  - Fixed typos.
 
 v0.2.2    2025-05-18 17:46:13+01:00 Europe/London
   [Documentation]

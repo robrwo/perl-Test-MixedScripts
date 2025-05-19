@@ -51,4 +51,6 @@ is $b2->squash_info->flatten,
   ],
   "expected failure";
 
+file_scripts_ok( 't/data/good-03.pod' );
+
 done_testing;

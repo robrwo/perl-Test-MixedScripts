@@ -63,6 +63,28 @@ comment:
 
    "English bŭlgarski" ## Test::MixedScripts Latin,Cyrillic,Common
 
+You can also override the default scripts with a special POD directive, which will change the scripts for all lines
+(code or POD) that follow:
+
+    =for Test::MixedScripts Latin,Cyrillic,Common
+
+You can reset to the default scripts using:
+
+    =for Test::MixedScripts default
+
+You can escape the individual characters in strings and regular expressions using hex codes, for example,
+
+   say qq{The Cyryllic "\x{043e}" looks like an "o".};
+
+and in POD using the C<E> formatting code. For example,
+    =pod
+
+    The Cyryllic "E<0x043e>" looks like an "o".
+
+    =cut
+
+See L<perlpod> for more information.
+
 =cut
 
 sub file_scripts_ok {
@@ -105,12 +127,19 @@ sub _check_file_scripts {
 
     $fh->binmode(":utf8");
 
+    my $current = $default;
+
     while ( my $line = $fh->getline ) {
-        my $re = $default;
+        my $re = $current;
         # TODO custom comment prefix based on the file type
         if ( $line =~ s/\s*##\s+Test::MixedScripts\s+(\w+(?:,\w+)*).*$// ) {
             $re = _make_regex( split /,\s*/, $1 );
         }
+        elsif ( $line =~ /^=for\s+Test::MixedScripts\s+(\w+(?:,\w+)*)$/ ) {
+            $current = $1 eq "default" ? $default : _make_regex( split /,\s*/, $1 );
+            next;
+        }
+
         unless ( $line =~ $re ) {
             my $fail = _make_negative_regex(@scripts);
             $line =~ $fail;
@@ -224,13 +253,6 @@ sub _is_xs_file {
 }
 
 1;
-
-=head1 KNOWN ISSUES
-
-The current version does not support specifying exceptions to specific lines of POD.
-
-The only workaround for this is to escape the individual characters using the C<E> formatting code. See L<perlpod>
-for more information. See L<perlpod> for more details.
 
 =head1 SEE ALSO
 
