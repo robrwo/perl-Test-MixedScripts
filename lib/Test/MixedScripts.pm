@@ -77,6 +77,7 @@ You can escape the individual characters in strings and regular expressions usin
    say qq{The Cyryllic "\x{043e}" looks like an "o".};
 
 and in POD using the C<E> formatting code. For example,
+
     =pod
 
     The Cyryllic "E<0x043e>" looks like an "o".

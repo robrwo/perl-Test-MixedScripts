@@ -78,9 +78,10 @@ say qq{The Cyryllic "\x{043e}" looks like an "o".};
 ```
 
 and in POD using the `E` formatting code. For example,
-    =pod
 
 ```
+=pod
+
 The Cyryllic "E<0x043e>" looks like an "o".
 
 =cut
