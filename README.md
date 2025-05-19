@@ -88,6 +88,12 @@ The Cyryllic "E<0x043e>" looks like an "o".
 
 See [perlpod](https://metacpan.org/pod/perlpod) for more information.
 
+When tests fail, the diagnostic message will indicate the unexpected script and where the character was in the file:
+
+```
+Unexpected Cyrillic character on line 286 character 45 in lib/Foo/Bar.pm
+```
+
 ## all\_perl\_files\_scripts\_ok
 
 ```

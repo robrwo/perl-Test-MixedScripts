@@ -85,6 +85,10 @@ and in POD using the C<E> formatting code. For example,
 
 See L<perlpod> for more information.
 
+When tests fail, the diagnostic message will indicate the unexpected script and where the character was in the file:
+
+    Unexpected Cyrillic character on line 286 character 45 in lib/Foo/Bar.pm
+
 =cut
 
 sub file_scripts_ok {

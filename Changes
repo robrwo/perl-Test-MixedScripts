@@ -5,6 +5,8 @@ Revision history for {{ $dist->name }}:
   - Added POD directives to change the expected Unicode scripts for longer blocks of code.
 
   [Documentation]
+  - Document failure messages.
+
   - Fixed typos.
 
 v0.2.2    2025-05-18 17:46:13+01:00 Europe/London
