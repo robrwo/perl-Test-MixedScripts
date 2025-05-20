@@ -14,7 +14,7 @@ use File::Find;
 use File::Spec;
 use IO            qw( File );
 use List::Util    qw( first );
-use Unicode::UCD  qw( charscript charscripts );
+use Unicode::UCD  qw( charinfo charscripts );
 
 use Test2::API 1.302200 qw( context );
 
@@ -92,7 +92,7 @@ See L<perlpod> for more information.
 
 When tests fail, the diagnostic message will indicate the unexpected script and where the character was in the file:
 
-    Unexpected Cyrillic character on line 286 character 45 in lib/Foo/Bar.pm
+    Unexpected Cyrillic character CYRILLIC SMALL LETTER ER on line 286 character 45 in lib/Foo/Bar.pm
 
 =cut
 
@@ -112,9 +112,15 @@ sub file_scripts_ok {
         # Ideally we would use charprop instead of charscript, since that supports Script_Extensions, but Unicode::UCD
         # is not dual life and charprop is only available after v5.22.0.
 
-        my $script  = charscript( ord($char) );
-        my $message =
-          sprintf( 'Unexpected %s character on line %u character %s in %s', $script, $lino, length($pre) + 1, "$file" );
+        my $info    = charinfo( ord($char) );
+        my $message = sprintf(
+            'Unexpected %s character %s on line %u character %u in %s',
+            $info->{script},               #
+            $info->{name} || "NO NAME",    #
+            $lino,                         #
+            length($pre) + 1,              #
+            "$file"
+        );
 
         $ctx->fail( $file, $message );
 

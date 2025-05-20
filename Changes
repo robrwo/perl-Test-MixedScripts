@@ -1,6 +1,9 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+  [Enhancements]
+  - Test failure diagnostics show the name of the character.
+
   [Bug Fixes]
   - Ignores "tmp" directory inside the repo.
 
