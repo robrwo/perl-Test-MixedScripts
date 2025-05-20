@@ -9,11 +9,14 @@ version v0.3.1
 # SYNOPSIS
 
 ```perl
+use Test::V0;
 use Test::MixedScripts v0.3.0 qw( all_perl_files_scripts_ok file_scripts_ok );
 
 all_perl_files_scripts_ok();
 
 file_scripts_ok( 'assets/site.js' );
+
+done_testing;
 ```
 
 # DESCRIPTION
@@ -92,7 +95,7 @@ See [perlpod](https://metacpan.org/pod/perlpod) for more information.
 When tests fail, the diagnostic message will indicate the unexpected script and where the character was in the file:
 
 ```
-Unexpected Cyrillic character on line 286 character 45 in lib/Foo/Bar.pm
+Unexpected Cyrillic character CYRILLIC SMALL LETTER ER on line 286 character 45 in lib/Foo/Bar.pm
 ```
 
 ## all\_perl\_files\_scripts\_ok
