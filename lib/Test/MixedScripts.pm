@@ -287,6 +287,10 @@ by Unicode versions.
 
 The C<=for> directive is not consistently copied relative to the sections that occur in by L<Pod::Weaver>.
 
+=head2 Other Limitations
+
+This will not identify confusable characters from the same scripts.
+
 =head1 SEE ALSO
 
 L<Test::PureASCII> tests that only ASCII characters are used.

@@ -121,6 +121,10 @@ by Unicode versions.
 
 The `=for` directive is not consistently copied relative to the sections that occur in by [Pod::Weaver](https://metacpan.org/pod/Pod%3A%3AWeaver).
 
+## Other Limitations
+
+This will not identify confusable characters from the same scripts.
+
 # SEE ALSO
 
 [Test::PureASCII](https://metacpan.org/pod/Test%3A%3APureASCII) tests that only ASCII characters are used.
