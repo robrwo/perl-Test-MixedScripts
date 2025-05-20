@@ -26,11 +26,14 @@ our $VERSION = 'v0.3.1';
 
 =head1 SYNOPSIS
 
+  use Test::V0;
   use Test::MixedScripts v0.3.0 qw( all_perl_files_scripts_ok file_scripts_ok );
 
   all_perl_files_scripts_ok();
 
   file_scripts_ok( 'assets/site.js' );
+
+  done_testing;
 
 =head1 DESCRIPTION
 
