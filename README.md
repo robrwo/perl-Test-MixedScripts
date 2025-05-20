@@ -129,7 +129,10 @@ This will not identify confusable characters from the same scripts.
 
 [Test::PureASCII](https://metacpan.org/pod/Test%3A%3APureASCII) tests that only ASCII characters are used.
 
-[Unicode Confusables](https://util.unicode.org/UnicodeJsps/confusables.jsp)
+[Unicode::Confuse](https://metacpan.org/pod/Unicode%3A%3AConfuse) identifies [Unicode Confusables](https://util.unicode.org/UnicodeJsps/confusables.jsp).
+
+[Unicode::Security](https://metacpan.org/pod/Unicode%3A%3ASecurity) implements several security mechanisms described in
+[Unicode Security Mechanisms](https://www.unicode.org/reports/tr39/).
 
 [Detecting malicious Unicode](https://daniel.haxx.se/blog/2025/05/16/detecting-malicious-unicode/)
 

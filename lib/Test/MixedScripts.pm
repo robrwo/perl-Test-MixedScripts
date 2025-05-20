@@ -295,7 +295,10 @@ This will not identify confusable characters from the same scripts.
 
 L<Test::PureASCII> tests that only ASCII characters are used.
 
-L<Unicode Confusables|https://util.unicode.org/UnicodeJsps/confusables.jsp>
+L<Unicode::Confuse> identifies L<Unicode Confusables|https://util.unicode.org/UnicodeJsps/confusables.jsp>.
+
+L<Unicode::Security> implements several security mechanisms described in
+L<Unicode Security Mechanisms|https://www.unicode.org/reports/tr39/>.
 
 L<Detecting malicious Unicode|https://daniel.haxx.se/blog/2025/05/16/detecting-malicious-unicode/>
 
