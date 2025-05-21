@@ -10,6 +10,7 @@ use warnings;
 use Carp          qw( croak );
 use Cwd qw( cwd );
 use Exporter 5.57 qw( import );
+use File::Basename qw( basename );
 use File::Find;
 use File::Spec;
 use IO            qw( File );
@@ -208,7 +209,7 @@ sub all_perl_files_scripts_ok {
 
 sub _all_perl_files {
     my @files = _all_files(@_);
-    return grep { _is_perl_module($_) || _is_perl_script($_) || _is_pod_file($_) || _is_xs_file($_) } @files;
+    return grep { _is_perl_module($_) || _is_perl_script($_) || _is_pod_file($_) || _is_xs_file($_) || _is_template($_) } @files;
 }
 
 sub _all_files {
@@ -259,9 +260,11 @@ sub _is_pod_file {
 }
 
 sub _is_perl_script {
-    my $file = shift;
-    return 1 if $file =~ /\.pl$/i;
-    return 1 if $file =~ /\.t$/;
+    my ($file) = @_;
+    my $name = basename($file);
+    return 1 if $name =~ /\.p(?:l|sgi)$/i;
+    return 1 if $name =~ /\.t$/;
+    return 1 if $name =~ /^(?:Rexfile|cpanfile)$/;
     my $fh = IO::File->new( $file, "r" ) or return;
     my $first = $fh->getline;
     return 1 if defined $first && ( $first =~ /^#!.*perl\b/ );
@@ -270,6 +273,12 @@ sub _is_perl_script {
 
 sub _is_xs_file {
     $_[0] =~ /\.(c|h|xs)$/i;
+}
+
+sub _is_template {
+    my ($file) = @_;
+    my $name = basename($file);
+    return 1 if $name =~ /\.(?:epl?|inc|mc|psp|tal|tm?pl|tt)$/;
 }
 
 1;

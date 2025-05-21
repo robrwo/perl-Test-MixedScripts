@@ -1,6 +1,8 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+  [Enhancements]
+  - Various kinds of scripts and templates are tested by all_perl_files_scripts_ok.
 
 v0.4.0    2025-05-20 19:52:09+01:00 Europe/London
   [Enhancements]
