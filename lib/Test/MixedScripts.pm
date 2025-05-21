@@ -269,6 +269,7 @@ sub _is_perl_script {
     my $fh = IO::File->new( $file, "r" ) or return;
     my $first = $fh->getline;
     return 1 if defined $first && ( $first =~ /^#!.*perl\b/ );
+    return 1 if $file =~ /[.]bat$/i && $first =~ /--[*]-Perl-[*]--/;
     return;
 }
 
