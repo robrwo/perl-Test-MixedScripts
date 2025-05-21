@@ -262,8 +262,9 @@ sub _is_pod_file {
 sub _is_perl_script {
     my ($file) = @_;
     my $name = basename($file);
-    return 1 if $name =~ /\.p(?:l|sgi)$/i;
+    return 1 if $name =~ /\.pl$/i;
     return 1 if $name =~ /\.t$/;
+    return 1 if $name =~ /\.psgi$/;
     return 1 if $name =~ /^(?:Rexfile|cpanfile)$/;
     my $fh = IO::File->new( $file, "r" ) or return;
     my $first = $fh->getline;
