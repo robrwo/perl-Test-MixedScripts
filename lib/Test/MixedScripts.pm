@@ -9,7 +9,7 @@ use warnings;
 
 use Carp          qw( croak );
 use Exporter 5.57 qw( import );
-use ExtUtils::Manifest 1.54 qw( manifind maniskip );
+use ExtUtils::Manifest 1.54 qw( manifind maniread maniskip );
 use File::Basename qw( basename );
 use File::Spec;
 use IO            qw( File );
@@ -216,8 +216,10 @@ sub _all_files {
     my $options = {};
     $options = shift if ref $_[0] eq 'HASH';
 
+    my $mfile = $ExtUtils::Manifest::MANIFEST;
+
     my $skip  = maniskip;
-    my $found = manifind();
+    my $found = -e $mfile ? maniread($mfile) : manifind();
 
     my $check = sub {
         my ($file) = @_;
