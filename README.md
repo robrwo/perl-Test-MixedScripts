@@ -103,10 +103,11 @@ Unexpected Cyrillic character CYRILLIC SMALL LETTER ER on line 286 character 45 
 ```
 all_perl_files_scripts_ok();
 
-all_perl_files_scripts_ok( \%options, @dirs );
+all_perl_files_scripts_ok( \%options );
 ```
 
-This applies ["file\_scripts\_ok"](#file_scripts_ok) to all of the Perl scripts in `@dirs`, or the current directory if they are omitted.
+This applies ["file\_scripts\_ok"](#file_scripts_ok) to all of the Perl scripts in the current directory, based the distribution
+[MANIFEST](https://metacpan.org/pod/ExtUtils%3A%3AManifest).
 
 # KNOWN ISSUES
 
