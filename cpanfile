@@ -3,7 +3,7 @@
 
 requires "Carp" => "0";
 requires "Exporter" => "5.57";
-requires "ExtUtils::Manifest" => "1.54";
+requires "ExtUtils::Manifest" => "1.68";
 requires "File::Basename" => "0";
 requires "File::Spec" => "0";
 requires "IO" => "0";
@@ -39,6 +39,7 @@ on 'configure' => sub {
 };
 
 on 'develop' => sub {
+  requires "ExtUtils::Manifest" => "1.68";
   requires "Pod::Coverage::TrustPod" => "0";
   requires "Software::Security::Policy::Individual" => "0.10";
   requires "Test::CPAN::Changes" => "0";

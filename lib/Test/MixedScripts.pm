@@ -9,7 +9,7 @@ use warnings;
 
 use Carp          qw( croak );
 use Exporter 5.57 qw( import );
-use ExtUtils::Manifest 1.54 qw( manifind maniread maniskip );
+use ExtUtils::Manifest 1.68 qw( manifind maniread maniskip );
 use File::Basename qw( basename );
 use File::Spec;
 use IO            qw( File );
