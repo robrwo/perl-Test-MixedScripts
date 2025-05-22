@@ -1,0 +1,22 @@
+# Git
+^\.git
+
+# Makemaker generated files and dirs.
+^MANIFEST\.
+^Makefile$
+^blib/
+^MakeMaker-\d
+
+# Dist::Zilla
+^\.build/
+
+^Test-MixedScripts-.*
+
+# Perl::Tidy
+\.ERR$
+
+# Temp, old and emacs backup files.
+~$
+\.old$
+^#.*#$
+^\.#
