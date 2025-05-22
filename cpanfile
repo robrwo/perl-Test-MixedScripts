@@ -4,6 +4,7 @@
 requires "Carp" => "0";
 requires "Cwd" => "0";
 requires "Exporter" => "5.57";
+requires "File::Basename" => "0";
 requires "File::Find" => "0";
 requires "File::Spec" => "0";
 requires "IO" => "0";
