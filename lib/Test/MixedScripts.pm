@@ -196,8 +196,6 @@ L<MANIFEST|ExtUtils::Manifest>.
 
 =cut
 
-# This code is originally based on code from Test::EOL v2.02, originally by Tomas Doran <bobtfish@bobtfish.net>
-
 sub all_perl_files_scripts_ok {
     my $options = { };
     $options = shift if ref $_[0] eq 'HASH';
@@ -310,10 +308,5 @@ L<Detecting malicious Unicode|https://daniel.haxx.se/blog/2025/05/16/detecting-m
 
 Security issues should not be reported on the bugtracker website. Please see F<SECURITY.md> for instructions how to
 report security vulnerabilities
-
-=head1 append:AUTHOR
-
-The file traversing code used in L</all_perl_files_scripts_ok> is based on code from L<Test::EOL> by Tomas Doran
-<bobtfish@bobtfish.net> and others.
 
 =cut

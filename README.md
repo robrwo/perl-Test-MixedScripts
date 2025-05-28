@@ -160,9 +160,6 @@ report security vulnerabilities
 
 Robert Rothenberg <rrwo@cpan.org>
 
-The file traversing code used in ["all\_perl\_files\_scripts\_ok"](#all_perl_files_scripts_ok) is based on code from [Test::EOL](https://metacpan.org/pod/Test%3A%3AEOL) by Tomas Doran
-<bobtfish@bobtfish.net> and others.
-
 # COPYRIGHT AND LICENSE
 
 This software is copyright (c) 2025 by Robert Rothenberg.
