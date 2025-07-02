@@ -94,6 +94,10 @@ When tests fail, the diagnostic message will indicate the unexpected script and 
 
     Unexpected Cyrillic character CYRILLIC SMALL LETTER ER on line 286 character 45 in lib/Foo/Bar.pm
 
+You can also specify "ASCII" as a special script name for only 7-bit ASCII characters:
+
+  file_scripts_ok( $filepath, qw/ ASCII / );
+
 =cut
 
 sub file_scripts_ok {
@@ -168,11 +172,11 @@ sub _check_file_scripts {
 }
 
 sub _make_regex_set {
-    state $scripts = charscripts();
+    state $scripts = { ASCII => undef, map { $_ => 1 } keys %{ charscripts() } };
     if ( my $err = first { !exists $scripts->{$_} } @_ ) {
         croak "Unknown script ${err}";
     }
-    return join( "", map { sprintf( '\p{scx=%s}', $_ ) } @_ );
+    return join( "", map { $_ eq "ASCII" ? '\x00-\x7f' : sprintf( '\p{scx=%s}', $_ ) } @_ );
 }
 
 sub _make_regex {

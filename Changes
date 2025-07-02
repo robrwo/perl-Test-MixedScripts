@@ -1,6 +1,9 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+  [Enhancements]
+  - Allow testibng for ASCII characters.
+
   [Tests]
   - Updated author and release tests.
 
