@@ -98,6 +98,12 @@ When tests fail, the diagnostic message will indicate the unexpected script and 
 Unexpected Cyrillic character CYRILLIC SMALL LETTER ER on line 286 character 45 in lib/Foo/Bar.pm
 ```
 
+You can also specify "ASCII" as a special script name for only 7-bit ASCII characters:
+
+```
+file_scripts_ok( $filepath, qw/ ASCII / );
+```
+
 ## all\_perl\_files\_scripts\_ok
 
 ```
