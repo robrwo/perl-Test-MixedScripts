@@ -98,6 +98,8 @@ You can also specify "ASCII" as a special script name for only 7-bit ASCII chara
 
   file_scripts_ok( $filepath, qw/ ASCII / );
 
+Note that "ASCII" is available in version v0.6.0 or later.
+
 =cut
 
 sub file_scripts_ok {
