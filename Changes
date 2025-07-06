@@ -2,6 +2,8 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+  [Enhancements]
+  - Use Test2::Util::DistFiles to gather files for testing.
 
 v0.6.0    2025-07-05 12:50:00+01:00 Europe/London
   [Enhancements]
