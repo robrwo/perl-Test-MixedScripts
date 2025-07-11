@@ -1,6 +1,8 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+
+v0.6.2    2025-07-11 21:32:00+01:00 Europe/London
   [Bug Fixes]
   - Updated the minimum Test2::Util::DistFiles version to fix a bug handling scaffolding files.
 
