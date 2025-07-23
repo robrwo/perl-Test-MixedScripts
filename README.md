@@ -150,7 +150,14 @@ This will not identify confusable characters from the same scripts.
 The development version is on github at [https://github.com/robrwo/perl-Test-MixedScripts](https://github.com/robrwo/perl-Test-MixedScripts)
 and may be cloned from [git://github.com/robrwo/perl-Test-MixedScripts.git](git://github.com/robrwo/perl-Test-MixedScripts.git)
 
-# BUGS
+# SUPPORT
+
+Only the latest version of this module will be supported.
+
+This module requires Perl v5.16 or later.  Future releases may only support Perl versions released in the last ten
+years.
+
+## Reporting Bugs and Submitting Feature Requests
 
 Please report any bugs or feature requests on the bugtracker website
 [https://github.com/robrwo/perl-Test-MixedScripts/issues](https://github.com/robrwo/perl-Test-MixedScripts/issues)
@@ -159,10 +166,8 @@ When submitting a bug or request, please include a test-file or a
 patch to an existing test-file that illustrates the bug or desired
 feature.
 
-## Reporting Security Vulnerabilities
-
-Security issues should not be reported on the bugtracker website. Please see `SECURITY.md` for instructions how to
-report security vulnerabilities
+If the bug you are reporting has security implications which make it inappropriate to send to a public issue tracker,
+then see `SECURITY.md` for instructions how to report security vulnerabilities.
 
 # AUTHOR
 

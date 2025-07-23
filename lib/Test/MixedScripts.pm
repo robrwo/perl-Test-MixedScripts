@@ -267,11 +267,18 @@ L<Unicode Security Mechanisms|https://www.unicode.org/reports/tr39/>.
 
 L<Detecting malicious Unicode|https://daniel.haxx.se/blog/2025/05/16/detecting-malicious-unicode/>
 
-=head1 append:BUGS
+=head1 prepend:SUPPORT
 
-=head2 Reporting Security Vulnerabilities
+Only the latest version of this module will be supported.
 
-Security issues should not be reported on the bugtracker website. Please see F<SECURITY.md> for instructions how to
-report security vulnerabilities
+This module requires Perl v5.16 or later.  Future releases may only support Perl versions released in the last ten
+years.
+
+=head2 Reporting Bugs and Submitting Feature Requests
+
+=head1 append:SUPPORT
+
+If the bug you are reporting has security implications which make it inappropriate to send to a public issue tracker,
+then see F<SECURITY.md> for instructions how to report security vulnerabilities.
 
 =cut
