@@ -4,7 +4,7 @@
   [Documentation]
   - Added SUPPORT section and merged BUGS into it.
 
-  [Other]
+  [Toolchain]
   - Fixed Dist::Zilla configuration.
 
 v0.6.2    2025-07-11 21:32:00+01:00 Europe/London
