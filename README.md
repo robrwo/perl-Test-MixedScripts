@@ -29,7 +29,7 @@ developer to copy and paste into their code.
 
 # RECENT CHANGES
 
-Changes for version v0.6.4 (2025-08-05)
+Changes for version v0.6.4 (2025-08-10)
 
 - Documentation
     - Removed separate INSTALL file.

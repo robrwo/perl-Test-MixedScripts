@@ -6,6 +6,9 @@ Revision history for {{ $dist->name }}:
 
   - Fixed broken Changes file.
 
+  [Tests]
+  - Added more author tests.
+
 v0.6.3    2025-08-03 11:54:16+01:00 Europe/London
   [Documentation]
   - Added SUPPORT section and merged BUGS into it.
