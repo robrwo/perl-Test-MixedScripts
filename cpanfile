@@ -39,7 +39,7 @@ on 'configure' => sub {
 };
 
 on 'develop' => sub {
-  requires "Dist::Zilla::Plugin::UsefulReadme" => "v0.3.0";
+  requires "Dist::Zilla::Plugin::UsefulReadme" => "v0.4.3";
   requires "ExtUtils::Manifest" => "1.68";
   requires "Pod::Coverage::TrustPod" => "0";
   requires "Pod::Markdown::Github" => "0";
