@@ -1,6 +1,8 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+  [Other]
+  - Include doap.xml in the git repo.
 
 v0.6.4    2026-04-08 20:13:11+01:00 Europe/London
   [Documentation]

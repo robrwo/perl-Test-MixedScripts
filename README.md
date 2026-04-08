@@ -29,17 +29,10 @@ developer to copy and paste into their code.
 
 # RECENT CHANGES
 
-Changes for version v0.6.4 (2026-04-08)
+Changes for version v0.6.5 (2026-04-08)
 
-- Documentation
-    - Removed separate INSTALL file.
-    - Fixed broken Changes file.
-    - Updated copyright year.
-- Tests
-    - Added more author tests.
-    - Author tests will be kept in the xt directory.
 - Other
-    - Added doap.xml metadata to the distribution.
+    - Include doap.xml in the git repo.
 
 See the `Changes` file for more details.
 
