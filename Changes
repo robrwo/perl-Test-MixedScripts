@@ -11,6 +11,9 @@ Revision history for {{ $dist->name }}:
   [Tests]
   - Added more author tests.
 
+  [Other]
+  - Added doap.xml metadata to the distribution.
+
 v0.6.3    2025-08-03 11:54:16+01:00 Europe/London
   [Documentation]
   - Added SUPPORT section and merged BUGS into it.
