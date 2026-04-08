@@ -31,6 +31,8 @@ developer to copy and paste into their code.
 
 Changes for version v0.6.5 (2026-04-08)
 
+- Tests
+    - Added more author tests.
 - Other
     - Include doap.xml in the git repo.
 

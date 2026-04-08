@@ -1,6 +1,9 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+  [Tests]
+  - Added more author tests.
+
   [Other]
   - Include doap.xml in the git repo.
 
