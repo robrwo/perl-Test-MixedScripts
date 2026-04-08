@@ -29,11 +29,12 @@ developer to copy and paste into their code.
 
 # RECENT CHANGES
 
-Changes for version v0.6.4 (2025-08-10)
+Changes for version v0.6.4 (2026-04-08)
 
 - Documentation
     - Removed separate INSTALL file.
     - Fixed broken Changes file.
+    - Updated copyright year.
 
 See the `Changes` file for more details.
 
@@ -121,7 +122,7 @@ Robert Rothenberg <rrwo@cpan.org>
 
 # COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2025 by Robert Rothenberg.
+This software is copyright (c) 2025-2026 by Robert Rothenberg.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
