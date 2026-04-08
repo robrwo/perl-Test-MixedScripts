@@ -37,6 +37,7 @@ Changes for version v0.6.4 (2026-04-08)
     - Updated copyright year.
 - Tests
     - Added more author tests.
+    - Author tests will be kept in the xt directory.
 - Other
     - Added doap.xml metadata to the distribution.
 
