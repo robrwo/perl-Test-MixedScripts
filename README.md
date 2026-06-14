@@ -35,8 +35,9 @@ Changes for version v0.6.5 (2026-06-14)
     - Removed CONTRIBUTING.md due to changes in automation policy.
 - Tests
     - Added more author tests.
-- Other
+- Toolchain
     - Include doap.xml in the git repo.
+    - Stop using deprecated Module::Signature to sign releases.
 
 See the `Changes` file for more details.
 

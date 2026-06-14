@@ -7,8 +7,10 @@ Revision history for {{ $dist->name }}:
   [Tests]
   - Added more author tests.
 
-  [Other]
+  [Toolchain]
   - Include doap.xml in the git repo.
+
+  - Stop using deprecated Module::Signature to sign releases.
 
 v0.6.4    2026-04-08 20:13:11+01:00 Europe/London
   [Documentation]
