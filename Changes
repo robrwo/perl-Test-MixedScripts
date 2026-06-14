@@ -4,6 +4,8 @@ Revision history for {{ $dist->name }}:
   [Documentation]
   - Removed CONTRIBUTING.md due to changes in automation policy.
 
+  - Updated maintainer contact address.
+
   [Tests]
   - Added more author tests.
 

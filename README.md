@@ -33,6 +33,7 @@ Changes for version v0.6.5 (2026-06-14)
 
 - Documentation
     - Removed CONTRIBUTING.md due to changes in automation policy.
+    - Updated maintainer contact address.
 - Tests
     - Added more author tests.
 - Toolchain
@@ -121,7 +122,7 @@ See `CONTRIBUTING.md` for more information.
 
 # AUTHOR
 
-Robert Rothenberg <rrwo@cpan.org>
+Robert Rothenberg <perl@rhizomnic.com>
 
 # COPYRIGHT AND LICENSE
 
