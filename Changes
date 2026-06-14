@@ -1,6 +1,9 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+  [Documentation]
+  - Removed CONTRIBUTING.md due to changes in automation policy.
+
   [Tests]
   - Added more author tests.
 

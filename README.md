@@ -29,8 +29,10 @@ developer to copy and paste into their code.
 
 # RECENT CHANGES
 
-Changes for version v0.6.5 (2026-04-08)
+Changes for version v0.6.5 (2026-06-14)
 
+- Documentation
+    - Removed CONTRIBUTING.md due to changes in automation policy.
 - Tests
     - Added more author tests.
 - Other
