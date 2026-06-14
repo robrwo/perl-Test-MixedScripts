@@ -15,8 +15,8 @@ requires "utf8" => "0";
 requires "warnings" => "0";
 
 on 'build' => sub {
-  requires "ExtUtils::MakeMaker" => "7.22";
-  requires "Module::Metadata" => "1.000015";
+  recommends "ExtUtils::MakeMaker" => "7.22";
+  recommends "Module::Metadata" => "1.000015";
 };
 
 on 'test' => sub {
@@ -24,7 +24,7 @@ on 'test' => sub {
   requires "FindBin" => "0";
   requires "IO::Handle" => "0";
   requires "IPC::Open3" => "0";
-  requires "Module::Metadata" => "1.000015";
+  requires "Module::Metadata" => "0";
   requires "Test2::Plugin::UTF8" => "0";
   requires "Test2::Tools::Exception" => "0";
   requires "Test2::V0" => "0";
