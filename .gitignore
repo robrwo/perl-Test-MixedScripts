@@ -1,5 +1,5 @@
 Test-MixedScripts-*/
-Test-MixedScripts-*.tar.gz
+Test-MixedScripts-*.tar.gz*
 .build/
 local/
 cpanfile.snapshot
