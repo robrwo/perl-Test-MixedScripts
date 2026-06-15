@@ -41,6 +41,7 @@ Changes for version v0.6.5 (2026-06-15)
     - Stop using deprecated Module::Signature to sign releases.
     - Set the static install flag.
     - Adjusted build prerequisites to be recommended instead of required.
+    - Sign distribution with SigStore.
 
 See the `Changes` file for more details.
 
