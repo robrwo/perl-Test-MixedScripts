@@ -29,19 +29,10 @@ developer to copy and paste into their code.
 
 # RECENT CHANGES
 
-Changes for version v0.6.5 (2026-06-15)
+Changes for version v0.6.6 (2026-07-17)
 
-- Documentation
-    - Removed CONTRIBUTING.md due to changes in automation policy.
-    - Updated maintainer contact address.
 - Tests
-    - Added more author tests.
-- Toolchain
-    - Include doap.xml in the git repo.
-    - Stop using deprecated Module::Signature to sign releases.
-    - Set the static install flag.
-    - Adjusted build prerequisites to be recommended instead of required.
-    - Sign distribution with SigStore.
+    - Fixed configuration for the Perl::Critic tests.
 
 See the `Changes` file for more details.
 

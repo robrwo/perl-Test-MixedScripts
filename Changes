@@ -1,6 +1,8 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+  [Tests]
+  - Fixed configuration for the Perl::Critic tests.
 
 v0.6.5    2026-06-15 08:25:30+01:00 Europe/London
   [Documentation]
